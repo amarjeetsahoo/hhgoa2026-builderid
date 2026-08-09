@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HH Goa 2026 — Dark Tropical Palm Builder ID Studio</title>
+  <meta name="description"
+    content="Generate your official HH Goa 2026 Dark Tropical Palm Builder ID Card badge. Upload photo, customize team crew, LinkedIn QR code, stack, SynthID AI tag, download HD JPEG & share #FrameInGoa on X.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Creepster&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="app-container">
+
+    <!-- Top Utility Nav Bar -->
+    <div class="top-nav-bar">
+      <div class="nav-left">
+        <span class="nav-dot"></span>
+        <span class="nav-studio">2:47PM STUDIO • 28–31 OCT 2026</span>
+      </div>
+      <div class="nav-right">
+        <a href="https://hacker-house-goa-2026.devfolio.co/" target="_blank" rel="noreferrer noopener" class="nav-btn nav-btn-yellow">
+          <i data-lucide="ticket"></i> Register
+        </a>
+        <a href="https://hhgoa.com/" target="_blank" rel="noreferrer noopener" class="nav-btn nav-btn-outline">
+          <i data-lucide="globe"></i> hhgoa.com <i data-lucide="arrow-up-right"></i>
+        </a>
+        <span class="nav-hashtag">#FrameInGoa</span>
+      </div>
+    </div>
+
+    <!-- Authentic HH Goa Header -->
+    <header class="app-header">
+      <div class="hh-logo-badge">
+        <span class="hh-tag">HH GOA 2026</span>
+        <span class="hh-dates">28–31 OCT 2026 • GOA, INDIA</span>
+      </div>
+      <h1 class="app-title">
+        HACKER <span class="goa-badge">गोवा</span> HOUSE
+      </h1>
+      <p class="app-subtitle">Dark Tropical Palm Builder Studio • One Frame, Whole Crew</p>
+    </header>
+
+    <!-- Main Workspace -->
+    <main class="workspace-grid">
+
+      <!-- Control Panel -->
+      <section class="control-panel">
+
+        <!-- Format Switcher (Card vs PFP) -->
+        <div class="format-switcher-tabs" id="formatSwitcher">
+          <button type="button" class="format-tab-btn active" data-mode="card">
+            <i data-lucide="id-card"></i> Builder ID Card
+          </button>
+          <button type="button" class="format-tab-btn" data-mode="pfp">
+            <i data-lucide="user-check"></i> PFP Frame
+          </button>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="tabs-header">
+          <button class="tab-btn active" data-tab="tab-upload">
+            <i data-lucide="user"></i> Photo & Details
+          </button>
+          <button class="tab-btn" data-tab="tab-filters">
+            <i data-lucide="sliders"></i> Filters & FX
+          </button>
+        </div>
+
+        <!-- Tab 1: Photo & Builder Details -->
+        <div class="tab-content active" id="tab-upload">
+
+          <!-- Upload Dropzone -->
+          <div class="upload-box" id="dropZone">
+            <input type="file" id="photoInput" accept="image/png, image/jpeg, image/webp, image/heic, image/heif">
+            <div class="upload-box-content">
+              <div class="upload-icon-wrapper">
+                <i data-lucide="upload-cloud"></i>
+              </div>
+              <p class="upload-title">Drop your photo here or <span class="browse-link">browse</span></p>
+              <p class="upload-hint">Supports JPG, PNG, WebP & iPhone HEIC</p>
+            </div>
+          </div>
+
+          <!-- Position & Scale Adjustments -->
+          <div class="control-group">
+            <div class="group-header">
+              <span class="group-title"><i data-lucide="move"></i> Photo Position & Scale</span>
+              <button type="button" class="btn-text" id="resetTransformBtn">Reset</button>
+            </div>
+
+            <div class="slider-field">
+              <div class="slider-label"><span>Zoom Scale</span> <span id="valZoom">100%</span></div>
+              <input type="range" id="sliderZoom" min="50" max="250" value="100">
+            </div>
+
+            <div class="slider-row">
+              <div class="slider-field">
+                <div class="slider-label"><span>Horizontal Pan</span></div>
+                <input type="range" id="sliderPanX" min="-300" max="300" value="0">
+              </div>
+              <div class="slider-field">
+                <div class="slider-label"><span>Vertical Pan</span></div>
+                <input type="range" id="sliderPanY" min="-300" max="300" value="0">
+              </div>
+            </div>
+
+            <div class="button-row">
+              <button type="button" class="btn-secondary btn-sm" id="rotateBtn">
+                <i data-lucide="rotate-cw"></i> Rotate 90°
+              </button>
+              <button type="button" class="btn-secondary btn-sm" id="centerBtn">
+                <i data-lucide="align-center"></i> Auto Center
+              </button>
+            </div>
+          </div>
+
+          <!-- Format B Builder Badge Details -->
+          <div class="control-group" id="builderFields">
+            <span class="group-title"><i data-lucide="badge-info"></i> Builder Badge Details</span>
+
+            <div class="input-field">
+              <label for="inputName">Full Name <span class="required-star">*</span></label>
+              <input type="text" id="inputName" maxlength="24" placeholder="Enter your full name">
+            </div>
+
+            <div class="input-field">
+              <label for="inputTeam">Team / Crew Name <span class="required-star">*</span></label>
+              <input type="text" id="inputTeam" maxlength="24" placeholder="e.g. GENESIS OF DISRUPTION">
+            </div>
+
+            <div class="input-field">
+              <label for="inputLinkedin">
+                <span>LinkedIn / Portfolio URL <span class="required-star">*</span></span>
+                <span class="hint-text">(Generates Scannable QR Code)</span>
+              </label>
+              <input type="text" id="inputLinkedin" maxlength="200" placeholder="https://linkedin.com/in/yourprofile">
+            </div>
+
+            <div class="input-field">
+              <label for="selectStack">Stack / Role <span class="required-star">*</span></label>
+              <select id="selectStack">
+                <option value="" disabled selected>Select your primary stack...</option>
+                <option value="MERN | PYTHON">MERN | PYTHON</option>
+                <option value="FULL-STACK AKA VIBE CODING FINAL BOSS">FULL-STACK AKA VIBE CODING FINAL BOSS</option>
+                <option value="AI / LLM ENGINEER">AI / LLM ENGINEER</option>
+                <option value="SOLANA / RUST DEV">SOLANA / RUST DEV</option>
+                <option value="PRODUCT DESIGNER">PRODUCT DESIGNER</option>
+                <option value="FOUNDER / HACKER">FOUNDER / HACKER</option>
+                <option value="Custom">Custom Role...</option>
+              </select>
+
+              <!-- Quick Role Pills -->
+              <div class="quick-role-pills" id="quickRolePills">
+                <button type="button" class="role-pill" data-role="FULL-STACK AKA VIBE CODING FINAL BOSS">FULLSTACK</button>
+                <button type="button" class="role-pill" data-role="AI / LLM ENGINEER">AI ENGINEER</button>
+                <button type="button" class="role-pill" data-role="SOLANA / RUST DEV">SMART CONTRACTS</button>
+                <button type="button" class="role-pill" data-role="MERN | PYTHON">FULL-STACK</button>
+                <button type="button" class="role-pill" data-role="PRODUCT DESIGNER">DESIGNER</button>
+                <button type="button" class="role-pill" data-role="FOUNDER / HACKER">FOUNDER</button>
+              </div>
+            </div>
+
+            <div class="input-field" id="customRoleWrapper" style="display: none;">
+              <label for="inputCustomRole">Custom Stack / Role <span class="required-star">*</span></label>
+              <input type="text" id="inputCustomRole" maxlength="30" placeholder="e.g. Quantum AI Developer">
+            </div>
+
+            <div class="input-field">
+              <label for="inputTitle">
+                <span>Builder Class / Title <span class="required-star">*</span></span>
+                <button type="button" class="btn-text" id="randomizeTitleBtn"><i data-lucide="shuffle"></i> Generate
+                  Title</button>
+              </label>
+              <input type="text" id="inputTitle" maxlength="40" placeholder="Generated or custom builder title">
+            </div>
+
+            <div class="input-field">
+              <label for="inputShipping">Currently Shipping <span class="required-star">*</span></label>
+              <input type="text" id="inputShipping" maxlength="40" placeholder="What are you currently building/shipping?">
+            </div>
+
+            <div class="input-field">
+              <label>Beach Bag Tags (Select up to 3)</label>
+              <div class="tag-pills-selector" id="beachBagTags">
+                <button type="button" class="tag-pill" data-tag="🌊 BEACH VIBES">🌊 BEACH VIBES</button>
+                <button type="button" class="tag-pill" data-tag="⚡ SIDE PROJECT">⚡ SIDE PROJECT</button>
+                <button type="button" class="tag-pill" data-tag="🎯 SHIP IT">🎯 SHIP IT</button>
+                <button type="button" class="tag-pill" data-tag="🚀 VIBE CODING">🚀 VIBE CODING</button>
+                <button type="button" class="tag-pill" data-tag="🌴 GOA LEGEND">🌴 GOA LEGEND</button>
+              </div>
+            </div>
+
+            <div class="input-field">
+              <label for="inputIdNumber">
+                <span>Builder ID Serial</span>
+                <button type="button" class="btn-text" id="regenSerialBtn"><i data-lucide="refresh-cw"></i>
+                  Regenerate</button>
+              </label>
+              <input type="text" id="inputIdNumber" readonly class="readonly-input">
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Tab 2: Filters & FX -->
+        <div class="tab-content" id="tab-filters">
+          <div class="control-group">
+            <span class="group-title"><i data-lucide="sparkles"></i> Preset Photo Filters</span>
+            <div class="presets-grid" id="presetsGrid">
+              <button class="preset-btn active" data-preset="none">Natural</button>
+              <button class="preset-btn" data-preset="sunset">Goa Sunset</button>
+              <button class="preset-btn" data-preset="vivid">Tropical Vivid</button>
+              <button class="preset-btn" data-preset="monochrome">B&W Film</button>
+              <button class="preset-btn" data-preset="vintage">Retro Cream</button>
+              <button class="preset-btn" data-preset="cyber">Cyber Magenta</button>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <div class="group-header">
+              <span class="group-title"><i data-lucide="sliders-horizontal"></i> Manual Adjustments</span>
+              <button type="button" class="btn-text" id="resetAdjustmentsBtn">Reset FX</button>
+            </div>
+
+            <div class="slider-field">
+              <div class="slider-label"><span>Brightness</span> <span id="valBrightness">100%</span></div>
+              <input type="range" id="sliderBrightness" min="50" max="150" value="100">
+            </div>
+
+            <div class="slider-field">
+              <div class="slider-label"><span>Contrast</span> <span id="valContrast">100%</span></div>
+              <input type="range" id="sliderContrast" min="50" max="150" value="100">
+            </div>
+
+            <div class="slider-field">
+              <div class="slider-label"><span>Saturation</span> <span id="valSaturation">100%</span></div>
+              <input type="range" id="sliderSaturation" min="0" max="200" value="100">
+            </div>
+
+            <div class="slider-field">
+              <div class="slider-label"><span>Blur Focus</span> <span id="valBlur">0px</span></div>
+              <input type="range" id="sliderBlur" min="0" max="10" value="0">
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Preview Canvas & Actions -->
+      <section class="preview-panel">
+
+        <div class="preview-card">
+          <!-- Live Preview Bar with Flip & 3D -->
+          <div class="preview-header">
+            <span class="preview-title"><i data-lucide="sparkles"></i> Live Preview</span>
+            <div class="preview-controls">
+              <button type="button" class="btn-control-sm" id="flipCardBtn" title="Flip Card (Front / Back)">
+                <i data-lucide="rotate-cw"></i> <span id="flipLabel">Flip to Back</span>
+              </button>
+              <button type="button" class="btn-control-sm" id="toggle3DBtn" title="Toggle 3D Tilt Effect">
+                <i data-lucide="box"></i> <span>3D</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="canvas-container aspect-card" id="canvasContainer">
+            <canvas id="graphicCanvas" width="1000" height="1580"></canvas>
+          </div>
+
+          <!-- Action Bar -->
+          <div class="action-bar">
+            <button type="button" class="btn-primary btn-lg" id="downloadBtn">
+              <i data-lucide="download"></i> Download Builder ID
+            </button>
+            <button type="button" class="btn-share-x btn-lg" id="shareXBtn">
+              <i data-lucide="twitter"></i> Share to X (#HackerHouseGoa2026)
+            </button>
+            <button type="button" class="btn-icon" id="copyClipboardBtn" title="Copy to Clipboard">
+              <i data-lucide="copy"></i>
+            </button>
+          </div>
+
+          <p class="share-tip"><i data-lucide="info"></i> Tip: Single download generates <strong>High-Definition Vertical Both-Sides JPEG (100% Quality, 2x Retina)</strong>. Share copies image to clipboard and opens X pre-filled with <strong>#HackerHouseGoa2026</strong>.</p>
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- Download Progress & HD Export Modal -->
+    <div class="modal-backdrop" id="downloadModal">
+      <div class="modal-card">
+        <button class="modal-close" id="closeModalBtn">&times;</button>
+
+        <!-- Rendering Progress State -->
+        <div id="modalLoadingState" class="modal-state">
+          <div class="spinner-ring"></div>
+          <h3 class="modal-title">Generating High-Definition Badge...</h3>
+          <p class="modal-subtitle">Rendering 2000×3160 Ultra HD Canvas (100% Quality JPEG)</p>
+          <div class="progress-bar-track">
+            <div class="progress-bar-fill" id="progressFill"></div>
+          </div>
+        </div>
+
+        <!-- Download & Preview Ready State -->
+        <div id="modalReadyState" class="modal-state" style="display: none;">
+          <div class="modal-icon-success">
+            <i data-lucide="check-circle-2"></i>
+          </div>
+          <h3 class="modal-title">Your HD Builder Badge is Ready!</h3>
+          <p class="modal-subtitle">Click the button below to download <strong>.JPG</strong> file directly, or
+            right-click / tap and hold to save.</p>
+
+          <div class="preview-img-wrapper">
+            <img id="modalPreviewImg" src="" alt="HH Goa 2026 Builder ID Badge HD Preview">
+          </div>
+
+          <div class="modal-actions">
+            <button type="button" id="modalDirectDownloadBtn" class="btn-primary btn-lg">
+              <i data-lucide="download"></i> Save .JPG to Your Computer
+            </button>
+            <button type="button" class="btn-secondary" id="modalOpenTabBtn">
+              <i data-lucide="external-link"></i> Open Image in New Tab
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <p class="footer-dots">Hacker House Goa 2026 • Amarjeet Sahoo • Build for Goa • Ship from Paradise • Instant
+        Browser Generator</p>
+    </footer>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>
